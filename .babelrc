@@ -3,9 +3,9 @@
     ["transform-react-jsx", { "pragma": "h" }]
   ],
   "presets": [
-    ["es2015", {
-      "es2015": {
-        "modules": false
+    ["env", {
+      "targets": {
+        "chrome": 63
       }
     }]
   ]
