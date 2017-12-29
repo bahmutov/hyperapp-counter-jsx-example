@@ -1,7 +1,5 @@
-// "h" while unused right now will be used when the
-// loader changes JSX syntax into "h" calls
-// eslint-disable-next-line no-unused-vars
-import { h, app } from 'hyperapp'
+import { app } from 'hyperapp'
+import { counters } from './components/counters'
 
 const state = {
   count: 0
@@ -12,12 +10,4 @@ const actions = {
   up: () => state => ({ count: state.count + 1 })
 }
 
-const view = (state, actions) => (
-  <main>
-    <h1>{state.count}</h1>
-    <button onclick={actions.down}>-</button>
-    <button onclick={actions.up}>+</button>
-  </main>
-)
-
-export const main = app(state, actions, view, document.body)
+export const main = app(state, actions, counters, document.body)
