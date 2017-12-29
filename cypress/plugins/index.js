@@ -1,5 +1,22 @@
 const webpackPreprocessor = require('@cypress/webpack-preprocessor')
-const webpackOptions = require('../../webpack.config.js')
+// hmm, why is the common webpack config leading to React.createElement?
+// const webpackOptions = require('../../webpack.config.js')
+
+const webpackOptions = {
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        query: {
+          presets: ['env'],
+          plugins: []
+        }
+      }
+    ]
+  }
+}
+
 module.exports = on => {
   on('file:preprocessor', webpackPreprocessor({ webpackOptions }))
 }

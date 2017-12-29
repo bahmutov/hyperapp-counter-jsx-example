@@ -6,7 +6,7 @@ const webpack = require('webpack')
 const plugins = [new webpack.optimize.ModuleConcatenationPlugin()]
 
 module.exports = function webpackStuff(env) {
-  if (env === 'production') plugins.push(new MinifyPlugin())
+  // if (env === 'production') plugins.push(new MinifyPlugin())
 
   return {
     entry: ['./src/index.js'],
@@ -18,11 +18,11 @@ module.exports = function webpackStuff(env) {
       rules: [
         {
           test: /\.js$/,
-          loader: 'babel-loader'
-          // query: {
-          //   presets: ['env'],
-          //   plugins: []
-          // }
+          loader: 'babel-loader',
+          query: {
+            presets: ['env'],
+            plugins: []
+          }
           // include: [
           //   path.resolve(__dirname, './'),
           //   path.join('node_modules', 'cypress-hyperapp-unit-test', 'src')
