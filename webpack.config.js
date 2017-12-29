@@ -12,21 +12,24 @@ module.exports = function webpackStuff(env) {
     entry: ['./src/index.js'],
     output: {
       filename: 'bundle.js',
-      path: path.resolve(__dirname, './'),
+      path: path.resolve(__dirname, './')
     },
     module: {
       rules: [
         {
           test: /\.js$/,
-          loader: 'babel-loader',
-          query: {
-            presets: ['env'],
-            plugins: [],
-          },
-          include: [path.resolve(__dirname, './')],
-        },
-      ],
+          loader: 'babel-loader'
+          // query: {
+          //   presets: ['env'],
+          //   plugins: []
+          // }
+          // include: [
+          //   path.resolve(__dirname, './'),
+          //   path.join('node_modules', 'cypress-hyperapp-unit-test', 'src')
+          // ]
+        }
+      ]
     },
-    plugins,
+    plugins
   }
 }

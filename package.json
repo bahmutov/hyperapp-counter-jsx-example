@@ -4,7 +4,7 @@
   "description": "Small counter example in Hyperapp and JSX (and Cypress tests)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "cypress open",
     "start": "webpack-dev-server",
     "build": "webpack --env production",
     "lint": "standard --verbose --fix src/*.js",
@@ -31,6 +31,7 @@
     "hyperapp": "^1.0.0"
   },
   "devDependencies": {
+    "@cypress/webpack-preprocessor": "^1.1.2",
     "babel-cli": "^6.22.2",
     "babel-core": "^6.22.1",
     "babel-loader": "^7.1.2",
@@ -38,11 +39,20 @@
     "babel-plugin-transform-react-jsx": "^6.22.0",
     "babel-preset-env": "^1.6.1",
     "css-loader": "^0.28.0",
+    "cypress": "^1.4.1",
+    "cypress-hyperapp-unit-test": "^1.2.0",
     "extract-text-webpack-plugin": "^3.0.0",
     "imports": "^1.0.0",
     "node-libs-browser": "^2.0.0",
     "standard": "^10.0.3",
     "webpack": "^3.4.0",
     "webpack-dev-server": "^2.4.2"
+  },
+  "standard": {
+    "globals": [
+      "Cypress",
+      "cy",
+      "expect"
+    ]
   }
 }
