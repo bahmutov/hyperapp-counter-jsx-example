@@ -5,7 +5,7 @@
   "presets": [
     ["env", {
       "targets": {
-        "chrome": 63
+        "chrome": "60"
       }
     }]
   ]

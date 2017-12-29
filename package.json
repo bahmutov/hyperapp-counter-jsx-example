@@ -1,7 +1,7 @@
 {
-  "name": "hyperapp-todo-jsx-example",
+  "name": "hyperapp-counter-jsx-example",
   "version": "1.0.0",
-  "description": "Small TodoMVC example in Hyperapp and JSX (and Cypress tests)",
+  "description": "Small counter example in Hyperapp and JSX (and Cypress tests)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bahmutov/hyperapp-todo-jsx-example.git"
+    "url": "git+https://github.com/bahmutov/hyperapp-counter-jsx-example.git"
   },
   "keywords": [
     "hyperapp",
@@ -22,9 +22,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bahmutov/hyperapp-todo-jsx-example/issues"
+    "url": "https://github.com/bahmutov/hyperapp-counter-jsx-example/issues"
   },
-  "homepage": "https://github.com/bahmutov/hyperapp-todo-jsx-example#readme",
+  "homepage": "https://github.com/bahmutov/hyperapp-counter-jsx-example#readme",
   "dependencies": {
     "hyperapp": "^1.0.0"
   },
