@@ -7,7 +7,7 @@ import { Counter } from './counter'
 export const Counters = (state, actions) => (
   <main>
     <h1>{state.count}</h1>
-    <Counter label={'+'} onclick={actions.down} />
-    <Counter label={'-'} onclick={actions.up} />
+    <Counter label={'+'} onclick={actions.up} />
+    <Counter label={'-'} onclick={actions.down} />
   </main>
 )

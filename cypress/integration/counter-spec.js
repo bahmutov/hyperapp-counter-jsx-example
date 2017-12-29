@@ -4,12 +4,11 @@ import { Counter } from '../../src/components/counter'
 /* eslint-env mocha */
 describe('Counter component', () => {
   const label = 'PLUS'
-  // we are creating spy outside a test, thus have to use
-  // Cypress.sinon object
-  const onclick = Cypress.sinon.spy()
+  let onclick
 
   beforeEach(() => {
     // passing onclick as a property
+    onclick = cy.spy()
     const state = {
       label,
       onclick
@@ -19,6 +18,10 @@ describe('Counter component', () => {
   })
 
   it('loads', () => {
+    cy.contains(label)
+  })
+
+  it('calls on click', () => {
     cy
       .contains(label)
       .click()
