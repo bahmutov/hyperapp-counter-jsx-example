@@ -1,5 +1,5 @@
 import { app } from 'hyperapp'
-import { counters } from './components/counters'
+import { Counters } from './components/counters'
 
 const state = {
   count: 0
@@ -10,4 +10,4 @@ const actions = {
   up: () => state => ({ count: state.count + 1 })
 }
 
-export const main = app(state, actions, counters, document.body)
+export const main = app(state, actions, Counters, document.body)
