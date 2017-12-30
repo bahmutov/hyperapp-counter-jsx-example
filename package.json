@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "cypress open",
+    "test:ci": "cypress run",
     "start": "webpack-dev-server",
     "build": "webpack --env production",
     "lint": "standard --verbose --fix src/*.js",
