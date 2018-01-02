@@ -35,6 +35,7 @@ Application code is in [src](src) folder. All tests are in [cypress/integration]
 - [counters-spec.js](cypress/integration/counters-spec.js) tests [Counters component](src/components/counters.js)
 - [counter-jsx-spec.js](cypress/integration/counter-jsx-spec.js) uses JSX inside the unit test
 - [different-counters-spec.js](cypress/integration/different-counters-spec.js) creates various Counter components to test edge cases
+- [actions-spec.js](cypress/integration/actions-spec.js) tests pure action functions
 
 ## More info
 

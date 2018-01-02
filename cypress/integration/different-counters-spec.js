@@ -41,17 +41,6 @@ describe('Counter variations', () => {
       })
   })
 
-  it('works even without onclick', () => {
-    const label = 'no click'
-    const component = (
-      <div>
-        <Counter label={label} />
-      </div>
-    )
-    mount({}, {}, () => component)
-    cy.contains(label)
-  })
-
   it('works without label', () => {
     const onclick = cy.spy()
     const component = (
@@ -66,5 +55,16 @@ describe('Counter variations', () => {
       .then(() => {
         expect(onclick).to.have.been.calledOnce
       })
+  })
+
+  it('works even without onclick', () => {
+    const label = 'no click'
+    const component = (
+      <div>
+        <Counter label={label} />
+      </div>
+    )
+    mount({}, {}, () => component)
+    cy.contains(label)
   })
 })
