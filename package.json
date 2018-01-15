@@ -29,7 +29,8 @@
   },
   "homepage": "https://github.com/bahmutov/hyperapp-counter-jsx-example#readme",
   "dependencies": {
-    "hyperapp": "^1.0.0"
+    "hyperapp": "^1.0.0",
+    "ramda": "^0.25.0"
   },
   "devDependencies": {
     "@cypress/webpack-preprocessor": "^1.1.2",
